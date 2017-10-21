@@ -53,3 +53,10 @@ footer{
   background: #222;
   text-align: center;
 }
+
+#pos{
+  margin-top: 400px;
+}
+#radius{
+  border-radius: 150px;
+}

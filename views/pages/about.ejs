@@ -4,13 +4,28 @@
     <div class="hero-content">
       <h2>This is all about us!</h2>
       <p>we are learners!</p>
-
       <a href="/contact" class="btn btn-lg btn-primary">wanna drop us a line!</a>
     </div>
   </section>
 
-
 <%- contentFor('body') %>
- <div class="jumbotron text-center">
+
+<div class="jumbotron text-center">
+  <h1>The Team</h1>
+
+  <div class = "row">
+    <% for (user of users) { %>
+      <div class="col-sm-3">
+          <br>
+          <img src="<%= user.photo %>" alt = "" class = "img-responsive" id = "radius">
+          <h2><%= user.name %>
+          <h3><%= user.email %>
+        </div>
+    <% } %>
+  </div>
+</div>
+
+
+ <div class="jumbotron text-center" id = pos>
     About Page
  </div>
