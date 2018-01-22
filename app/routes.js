@@ -1,4 +1,5 @@
 var express = require('express');
+var register = require("../controller/register");
 var router = express.Router();
 var path = require('path');
 module.exports = router;
@@ -20,6 +21,4 @@ router.get('/about',function(req,res){
 router.get('/contact',function(req,res){
   res.render('pages/contact');
 });
-router.post('/contact',function(req,res){
-    res.send("Thanks for contacting us!" + req.body.email + " we will get to you shortly!");
-});
+router.post('/contact', register.createUser );
